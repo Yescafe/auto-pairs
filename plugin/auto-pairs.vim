@@ -311,7 +311,7 @@ function! AutoPairsDelete()
   end
 
   " Delete last two spaces in parens, work with MapSpace
-  if has_key(b:AutoPairs, pprev_char) && prev_char == ' ' && current_char == ' '
+  if g:AutoPairsMapSpace && has_key(b:AutoPairs, pprev_char) && prev_char == ' ' && current_char == ' '
     return "\<BS>\<DEL>"
   endif
 
